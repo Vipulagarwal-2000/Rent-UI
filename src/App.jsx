@@ -3,13 +3,14 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-import AboutUs from "./AboutUs";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Siin from "./components/Siin";
-import Search from "./components/Search";
-import Register from "./components/Register";
-import Contact from "./Contact";
+import AboutUs from "./components/aboutus/AboutUs";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Siin from "./components/small/Siin";
+import Search from "./components/small/Search";
+import Register from "./components/small/Register";
+import Contact from "./components/contact/Contact";
+import HOW from "./components/how this work/howthiswork";
 
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/how" element={<HOW />} />
       </Routes>
     </Router>
     
