@@ -29,7 +29,7 @@ function Header() {
         <span><a href="/about">Rent</a></span>
         <span><a href="/about">How this Work</a></span>
         
-        <span><a href="/about">Contact</a></span>
+        <span><a href="/contact">Contact</a></span>
        
       </div>
     </div>

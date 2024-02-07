@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Siin from "./components/Siin";
 import Search from "./components/Search";
 import Register from "./components/Register";
+import Contact from "./Contact";
 
 
 
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
     
