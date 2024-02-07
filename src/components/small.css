@@ -1,0 +1,76 @@
+.search {
+    background-color: rgb(197, 170, 170); 
+padding:20px;
+height:4rem;
+width: 76%;
+border-radius: 50px;
+border: none;
+font-size: 1rem;
+position:absolute;
+top:120px;
+left:140px;
+}
+
+.siiin {background-color: rgb(197, 170, 170); 
+    width: 4%;
+    padding:8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height:80px;
+    position:absolute;
+top:100px;
+right:200px;
+box-sizing: content-box;
+
+}
+
+svg {
+    color:rgb(243, 249, 249);
+    width:30px;
+    height: 45px;
+
+   position:relative;
+   left:6%;
+   top:-10px;
+   margin-top:30px;
+   font-size: 32px;
+
+}
+.siiin a {
+    text-decoration: none;
+    color:black;
+}
+
+.siiin a {
+    margin: 0;
+}
+
+.register a p {background-color: rgb(197, 170, 170); 
+    width: max-content;
+    padding: 0 4px;
+    border-radius: 20px;
+    height:1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    
+   
+
+}
+.register a {
+    text-decoration: none;
+    color:black;
+
+
+}
+
+.register {
+    position:absolute;
+    top:200px;
+    right:210px;
+    background-color: rgb(197, 170, 170);
+    border-radius: 20px;
+    padding:0px;
+}
