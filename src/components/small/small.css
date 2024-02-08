@@ -48,14 +48,14 @@ svg {
     margin: 0;
 }
 
-.register a p {background-color: rgb(197, 170, 170); 
-    width: max-content;
-    padding: 0 4px;
+.register a #p {background-color: rgb(197, 170, 170); 
+    width: 60px;
+   
     border-radius: 20px;
     height:1rem;
     font-size: 1rem;
     font-weight: 500;
-    
+    margin-right:40px;
    
 
 }
@@ -69,7 +69,7 @@ svg {
 .register {
     position:absolute;
     top:180px;
-    right:210px;
+    right:180px;
     background-color: rgb(197, 170, 170);
     border-radius: 20px;
     padding:0px;

@@ -10,7 +10,7 @@ function Register() {
 
   return (
     <div>
-<div className=" register"><a href="/about"><p>REGISTER</p></a></div>
+<div className="register"><a href="/register"><p id="p">REGISTER</p></a></div>
  </div>
   );
 }

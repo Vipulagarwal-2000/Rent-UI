@@ -11,6 +11,9 @@ import Search from "./components/small/Search";
 import Register from "./components/small/Register";
 import Contact from "./components/contact/Contact";
 import HOW from "./components/how this work/howthiswork";
+import Signin from "./components/signin/Signin";
+import RegisterUser from "./components/register/RegisterUser";
+import Rent from "./components/rent/Rent";
 
 
 
@@ -54,6 +57,9 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/how" element={<HOW />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/register" element={<RegisterUser />} />
+        <Route path="/rent" element={<Rent />} />
       </Routes>
     </Router>
     

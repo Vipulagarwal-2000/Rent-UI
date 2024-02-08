@@ -26,7 +26,7 @@ function Header() {
         <span><a href="/about">About us</a></span>
       
         <span><a href="/about">Books</a></span>
-        <span><a href="/about">Rent</a></span>
+        <span><a href="/rent">Rent</a></span>
         <span><a href="/how">How this Work</a></span>
         
         <span><a href="/contact">Contact</a></span>
