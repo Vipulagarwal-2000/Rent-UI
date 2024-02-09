@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import RentCard from "./rentcard";
+import RentCard from "../rent/rentcard";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Siin from "../small/Siin";
@@ -8,7 +8,7 @@ import Search from "../small/Search";
 import Register from "../small/Register";
 
 
-function Rent() {
+function Lease() {
   const [formData, setFormData] = useState({
     BookName: "",
     userId: "",
@@ -30,12 +30,12 @@ function Rent() {
 
 
 
-    const handleSubmit = async (e) => {
+    const handleLease = async (e) => {
       e.preventDefault();
       console.log(formData);
     
       try {
-        const response = await axios.post("http://localhost:4000/api/rent", formData, {
+        const response = await axios.post("http://localhost:4000/api/lease", formData, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -47,22 +47,7 @@ function Rent() {
       }
     };
 
-    const handleAvilability = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-    
-      try {
-        const response = await axios.post("http://localhost:4000/api/available", formData, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-        setResponseMessage(response.data.message);
-      } catch (error) {
-        console.error("Error registering user:", error.response ? error.response.data : error.message);
-        setResponseMessage("Registration failed. Please check your inputs and try again.");
-      }
-    };
+  
     
  
 
@@ -75,7 +60,7 @@ function Rent() {
       <RentCard
         mid={""}
 
-p2= {<div><p>Book Id </p><p>Gibrish</p></div>}
+p2= {"Lease"}
        
         p={
           <div>
@@ -133,17 +118,14 @@ p2= {<div><p>Book Id </p><p>Gibrish</p></div>}
              
 
           button = { <div id="bl">
-              <span id="first"><p>Check avilability and rent</p>
-              <button id="button" type="submit" onClick={handleAvilability}>
-                available
+              <span id="first">
+              <button id="button" type="submit" onClick={handleLease}>
+                lease
               </button>
               </span>
 
-              <span id="second"><p>Rent Book</p>
-              <button id="button" type="submit" onClick={handleSubmit}>
-                rent
-              </button>
-              </span>
+             
+              
               </div>}
          
         
@@ -155,4 +137,4 @@ p2= {<div><p>Book Id </p><p>Gibrish</p></div>}
   );
 }
 
-export default Rent;
+export default Lease;

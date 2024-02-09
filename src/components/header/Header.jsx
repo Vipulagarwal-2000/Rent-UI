@@ -22,7 +22,7 @@ function Header() {
         </div>
       </div>
       <div className="right">
-      <span><a href="/about">Lease/Give</a></span>
+      <span><a href="/lease">Lease/Give</a></span>
         <span><a href="/about">About us</a></span>
       
         <span><a href="/about">Books</a></span>

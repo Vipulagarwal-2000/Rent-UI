@@ -58,7 +58,7 @@ h2 {
 
 label {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     margin-left: 60px;
     
     
@@ -80,20 +80,7 @@ input {
     padding:10px;
     font-family: Arial, Helvetica, sans-serif;font-size: 1rem; }
 
- #button {
-        margin: 0;
-        height:2.5rem;
-    position: relative;
-    left: 400px;
-        padding:5px;
-        border-radius: 10px;
-        background-color: antiquewhite;
-        border: 1px dotted rgb(246, 139, 157);
-        width: 100px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-        
-    }
+ 
 
     #button:hover {  background-color: rgb(115, 108, 100);
 
@@ -102,8 +89,36 @@ input {
         margin: 0;
         height:2.5rem;
     position: relative;
-    left: 300px;
-    top:150px;
+    left: 400px;
+        padding:5px;
+        border-radius: 10px;
+        background-color: antiquewhite;
+        border: 1px dotted rgb(152, 37, 56);
+        width: 100px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 30px;
+        
+    }
+
+    p a {
+        text-decoration: none;
+        margin-left: 60px;
+    }
+
+  
+
+    #button {
+        margin: 0;
+        height:2.5rem;
+    position: relative;
+    left: 400px;
+    
         padding:5px;
         border-radius: 10px;
         background-color: antiquewhite;
@@ -112,15 +127,4 @@ input {
         font-size: 1rem;
         margin-bottom: 10px;
         
-    }
-    p {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-left: 30px;
-        
-    }
-
-    p a {
-        text-decoration: none;
-        margin-left: 60px;
     }

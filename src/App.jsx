@@ -14,6 +14,7 @@ import HOW from "./components/how this work/howthiswork";
 import Signin from "./components/signin/Signin";
 import RegisterUser from "./components/register/RegisterUser";
 import Rent from "./components/rent/Rent";
+import Lease from "./components/lease/Lease";
 
 
 
@@ -60,6 +61,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/register" element={<RegisterUser />} />
         <Route path="/rent" element={<Rent />} />
+        <Route path="/lease" element={<Lease />} />
       </Routes>
     </Router>
     
