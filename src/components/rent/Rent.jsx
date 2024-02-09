@@ -93,7 +93,7 @@ p2= {<div><p>Book Id </p><p>Gibrish</p></div>}
               </label>
 
               <label id="label" htmlFor="userid">
-              <span> <p>User ID     </p>                                     
+              <span> <p>Renter User ID     </p>                                     
               </span>
               <span id="userid">  <input
                   type="text"

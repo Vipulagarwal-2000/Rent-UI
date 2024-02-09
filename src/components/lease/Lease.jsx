@@ -78,7 +78,7 @@ p2= {"Lease"}
               </label>
 
               <label id="label" htmlFor="userid">
-              <span> <p>User ID     </p>                                     
+              <span> <p>Leaser User ID     </p>                                     
               </span>
               <span id="userid">  <input
                   type="text"
