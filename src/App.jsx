@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
 import AboutUs from "./components/aboutus/AboutUs";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -15,9 +14,6 @@ import Signin from "./components/signin/Signin";
 import RegisterUser from "./components/register/RegisterUser";
 import Rent from "./components/rent/Rent";
 import Lease from "./components/lease/Lease";
-
-
-
 
 
 
@@ -42,10 +38,6 @@ function HomePage() {
         </div>
       );
     }
-
-
-
-
 
 function App() {
   return (
