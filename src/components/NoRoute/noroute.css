@@ -1,6 +1,12 @@
+.NoRoute-div {
+    height:60vh;
+}
+
+
 .NoRoute-css {
     font-size: 6rem;
     margin-left:300px;
-    margin-top: 300px;
+  
     color: rgb(197, 170, 170);
 }
+

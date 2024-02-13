@@ -1,5 +1,6 @@
 import React from "react"; //for using jsx
 import "./header.css";
+import MenuItem from "./Menu/MenuItem";
 
 function Header() {
   return (
@@ -26,24 +27,13 @@ function Header() {
           </div>
         </div>
         <div className="header-right">
-          <span class="header-menu">
-            <a href="/lease">Lease/Give</a>
-          </span>
-          <span className="header-menu">
-            <a href="/about">About us</a>
-          </span>
-          <span className="header-menu">
-            <a href="/about">Books</a>
-          </span>
-          <span className="header-menu">
-            <a href="/rent">Rent</a>
-          </span>
-          <span className="header-menu">
-            <a href="/how">How this Work</a>
-          </span>
-          <span className="header-menu">
-            <a href="/contact">Contact</a>
-          </span>
+        <MenuItem link="/lease" text="Lease/Give" />
+        <MenuItem link="/about" text="About us" />
+        <MenuItem link="/about" text="Books" />
+        <MenuItem link="/rent" text="Rent" />
+        <MenuItem link="/how" text="How this Work" />
+        <MenuItem link="/contact" text="Contact" />
+ 
         </div>
       </div>
     </div>
