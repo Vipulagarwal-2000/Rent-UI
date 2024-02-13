@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "./components/Footer";
-import Header from "./components/header"
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import "./noroute.css"
 
 
 function NoRoute() {
@@ -10,7 +11,7 @@ function NoRoute() {
   return (
     <div>
         <Header />
-        <h1> "404 : Wrong route/Endpoint!!"</h1>
+        <h1 className="NoRoute-css"> 404 : Wrong route/Endpoint!!</h1>
         <Footer />
     </div>
    

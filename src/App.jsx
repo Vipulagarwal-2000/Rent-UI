@@ -3,8 +3,8 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AboutUs from "./components/aboutus/AboutUs";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import Siin from "./components/small/Siin";
 import Search from "./components/small/Search";
 import Register from "./components/small/Register";
@@ -14,6 +14,7 @@ import Signin from "./components/signin/Signin";
 import RegisterUser from "./components/register/RegisterUser";
 import Rent from "./components/rent/Rent";
 import Lease from "./components/lease/Lease";
+import NoRoute from "./components/NoRoute/NoRoute";
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Route path="/register" element={<RegisterUser />} />
         <Route path="/rent" element={<Rent />} />
         <Route path="/lease" element={<Lease />} />
+        <Route path="/*" element={<NoRoute />} />
       </Routes>
     </Router>
     

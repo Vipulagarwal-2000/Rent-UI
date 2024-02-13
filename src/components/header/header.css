@@ -1,0 +1,73 @@
+.header-head {
+  width:100%;
+}
+.header-top {
+    background-color: rgb(158, 110, 110);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .header-left {
+    display: flex;
+    
+  }
+  
+  .header-svg svg {
+    width: 3rem;
+    height :3rem;
+    position: relative;
+    top:-15px;
+    left: 8px;
+  }
+  
+  #header-para {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  .header-left a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .header-left a:hover {
+    color: rgb(105, 235, 146);
+    text-decoration: none;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .header-menu {
+    margin-top: 30px;
+  }
+  
+  .header-right a {
+    color: rgb(232, 231, 231);
+    text-decoration: none;
+    padding-right: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+ 
+  .header-right a:hover {
+    color: rgb(105, 235, 146);
+    text-decoration: none;
+
+  }
+  
+  
+  
+ 
+ 
+  
+ 
+
+  
+

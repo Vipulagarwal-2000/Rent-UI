@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import RentCard from "../rent/rentcard";
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import Siin from "../small/Siin";
 import Search from "../small/Search";
 import Register from "../small/Register";
