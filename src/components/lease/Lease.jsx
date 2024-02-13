@@ -37,10 +37,10 @@ function Lease() {
       try {
         const response = await axios.post("http://localhost:4000/api/lease", formData, {
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json',  //important to write
           },
         });
-        setResponseMessage(response.data.message);
+        setResponseMessage(response.data.message);  //try it with putting it in try block
       } catch (error) {
         console.error("Error registering user:", error.response ? error.response.data : error.message);
         setResponseMessage("Registration failed. Please check your inputs and try again.");
@@ -68,7 +68,7 @@ p2= {"Lease"}
               <label id="label" htmlFor="BookName">
                 <span><p>Book Name</p></span>
                 <span> <input
-                  id="name"
+                  id="name"  //sub component
                   type="text"
                   name="BookName"
                   value={formData.BookName}

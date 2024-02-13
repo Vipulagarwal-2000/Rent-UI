@@ -4,7 +4,7 @@ import "./small.css"
 
 
 
-function Siin() {
+function Siin() {  //more descrptive name
 
     
 
