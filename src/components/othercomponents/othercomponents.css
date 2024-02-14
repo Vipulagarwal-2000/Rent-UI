@@ -16,6 +16,10 @@
    
 }
 
+.other-register:hover {
+  background-color: rgba(52, 43, 41, 0.873);
+}
+
 /*you have an unknown element behind make known of it */
   
 .other-register a {
@@ -98,6 +102,11 @@
   .other-signin a {
     text-decoration: none;
     margin: 0;
+   
+  }
+
+  .other-signin:hover {
+    background-color:rgb(240, 240, 240) ;
    
   }
 

@@ -8,8 +8,8 @@ function Card(props) {
     <div className="card-body">
       <div className="card-redstrip">{props.mid}</div> 
      
-<Component css={props.class1} first= {props.h1} second={props.p}/>
-<Component css={props.class2} first= {props.h2} second={props.p2}/>
+<Component css={props.css} first= {props.h1} second={props.p}/>
+<Component css={props.css2} first= {props.h2} second={props.p2}/>
 
      
     </div>
