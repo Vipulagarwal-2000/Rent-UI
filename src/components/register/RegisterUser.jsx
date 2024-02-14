@@ -3,9 +3,7 @@ import axios from "axios";
 import Single from "../singlecard/Single";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Siin from "../small/Siin";
-import Search from "../small/Search";
-import Register from "../small/Register";
+import OtherComponents from "../othercomponents/OtherComponent";;
 
 function RegisterUser() {
   const [formData, setFormData] = useState({
@@ -50,9 +48,7 @@ function RegisterUser() {
   return (
     <div>
       <Header />
-      <Search />
-      <Siin />
-      <Register />
+     <OtherComponents/>
       <Single
         mid={""}
         h1={""}

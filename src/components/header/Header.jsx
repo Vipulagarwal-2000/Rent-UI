@@ -9,6 +9,7 @@ function Header() {
         <div className="header-left">
           <div className="header-svg">
             <svg
+            id="head-svg"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"

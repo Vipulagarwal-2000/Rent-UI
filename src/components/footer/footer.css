@@ -7,7 +7,7 @@ body {
 
 
 
-.footer {
+#footer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,8 +76,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding:20px 0;
     padding-right: 50px;
     gap:30px;
+    margin-bottom: 0;
+   
 
     
   
@@ -85,7 +88,9 @@ body {
 
   
 
-  .footer-icon svg {
+  .footer-icon #footer-svg {
     color: rgb(138, 105, 235);
+    height: 35px;
+    width: 35px;
 
   }

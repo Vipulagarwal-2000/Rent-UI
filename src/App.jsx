@@ -5,9 +5,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AboutUs from "./components/aboutus/AboutUs";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Siin from "./components/small/Siin";
-import Search from "./components/small/Search";
-import Register from "./components/small/Register";
+import OtherComponents from "./components/othercomponents/OtherComponent";
 import Contact from "./components/contact/Contact";
 import HOW from "./components/how this work/howthiswork";
 import Signin from "./components/signin/Signin";
@@ -29,9 +27,7 @@ function HomePage() {
     return (
         <div>
         <Header />
-        <Search />
-         <Siin />
-        <Register />
+        <OtherComponents/>
           <h1 style={{ backgroundColor: "blue" }}>{message}</h1>
          
           <Footer/>

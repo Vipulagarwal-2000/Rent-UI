@@ -1,0 +1,144 @@
+  .other-register {
+    width:5%;
+    background-color: rgba(167, 106, 98, 0.327);
+    
+    padding: 0px;
+    margin-left: 20px;
+    height:50px;
+    margin-top: 10px;
+   
+    
+
+    /*
+     position: relative;
+     top: -104px;
+    left:1200px;*/
+   
+}
+
+/*you have an unknown element behind make known of it */
+  
+.other-register a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    
+  }
+
+  #other-para {
+    background-color: rgba(94, 75, 73, 0.327);
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 450;
+    margin: 0 ;
+    text-align: center;
+    padding:10px 15px;
+    
+  }
+  
+  /*  position: absolute;
+  top: 180px;
+  right: 180px;*/
+  
+  .other-search {
+    background-color: rgba(167, 106, 98, 0.327);
+    padding: 15px 25px;
+    height: 3rem;
+    width: 86%;
+    border-radius: 75px;
+    border:1px solid transparent;
+    font-size: 1.3rem;
+    margin: 18px 0 0 11.5%;
+    text-wrap:wrap;
+  
+  }
+
+  .search-div {
+    width:55%;
+    
+  }
+
+  .inline-signin {
+    width:2.5%;
+    display: inline-block;
+  }
+
+  .other-signin {
+    background-color: rgba(167, 106, 98, 0.327);
+    width: 100%;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 66px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 5px;
+
+    /* position: relative; 
+    top: -60px;
+    left:1100px;*/
+
+   
+  }
+  
+  .other-signin a #svg {
+    color: rgb(243, 249, 249);
+    height: 25px;
+    position: relative;
+    left: 6%;
+    top: -10px;
+    margin-top: 30px;
+    font-size: 32px;
+    padding-right: 2px;
+  }
+  .other-signin a {
+    text-decoration: none;
+    margin: 0;
+   
+  }
+
+  .othercomponents-triple-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

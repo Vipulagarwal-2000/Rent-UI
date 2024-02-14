@@ -12,14 +12,16 @@
   .header-left {
     display: flex;
     
+    
   }
   
-  .header-svg svg {
+  .header-svg #head-svg {
     width: 3rem;
     height :3rem;
     position: relative;
-    top:-15px;
+    top:15px;
     left: 8px;
+   color: aliceblue;
   }
   
   #header-para {
@@ -45,7 +47,7 @@
   }
 
   .header-menu {
-    margin-top: 30px;
+    margin-top: 28px;
   }
   
   .header-right a {

@@ -1,28 +1,19 @@
 import React from "react";
-import "./card.css"
+import "./card.css";
+import Component from "./CardComponent/Component";
 
-function Card(props){
-    
-return (
-<div className="body">
-<div className="redstrip">{props.mid}</div>
-     <div className={props.class1 ===undefined ?"card":props.class1 }>
-     <div >
-     {props.h1}
-     {props.p}
+function Card(props) {
+      /* Name it more descriptive props.mid*/ 
+  return (
+    <div className="card-body">
+      <div className="card-redstrip">{props.mid}</div> 
+     
+<Component css={props.class1} first= {props.h1} second={props.p}/>
+<Component css={props.class2} first= {props.h2} second={props.p2}/>
 
-     </div>
-     </div>
-     <div className={props.class2 ===undefined ?"card":props.class2}>
-     <div >
+     
+    </div>
+  );
+}
 
-    {props.h2}
-     {props.p2}
-     {props.button} 
-     </div>
-     </div>
-     </div>
-     );
-    }
-
-    export default Card;
+export default Card;

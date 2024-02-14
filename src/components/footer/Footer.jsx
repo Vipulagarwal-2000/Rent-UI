@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
   return (
 
-    <div className="footer">
+    <div id="footer">
       <div className="footer-cover">
         <div className="footer-float">
           <a href="./"><h2>BOOK RENTAL</h2></a>
@@ -17,6 +17,7 @@ function Footer() {
       <div className="footer-bottom">
         <div className="footer-icon">
           <svg
+          id="footer-svg"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -29,6 +30,7 @@ function Footer() {
         </div>
         <div className="footer-icon">
           <svg
+          id="footer-svg"
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="30"
@@ -41,6 +43,7 @@ function Footer() {
         </div>
         <div className="footer-icon">
           <svg
+          id="footer-svg"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"

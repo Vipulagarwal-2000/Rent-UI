@@ -3,9 +3,9 @@ import axios from "axios";
 import RentCard from "../rent/rentcard";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Siin from "../small/Siin";
-import Search from "../small/Search";
-import Register from "../small/Register";
+
+import OtherComponents from "../othercomponents/OtherComponent";
+
 
 
 function Lease() {
@@ -54,9 +54,7 @@ function Lease() {
   return (
     <div>
       <Header />
-      <Search />
-      <Siin />
-      <Register />
+     <OtherComponents/>
       <RentCard
         mid={""}
 

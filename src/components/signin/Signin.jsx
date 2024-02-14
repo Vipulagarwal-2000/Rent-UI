@@ -3,9 +3,7 @@ import Single from "../singlecard/Single";
 import axios from "axios";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Siin from "../small/Siin";
-import Search from "../small/Search";
-import Register from "../small/Register"; 
+import OtherComponents from "../othercomponents/OtherComponent";
 
 
 
@@ -52,9 +50,7 @@ function Signin() {
       return (
         <div >
         <Header />
-            <Search />
-             <Siin />
-            <Register />
+            <OtherComponents/>
             <Single  mid={""}   
             h1={""} p= {<div>
             <form>
