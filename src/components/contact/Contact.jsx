@@ -80,15 +80,15 @@ function Contact() {
         h2={<h2 class="contact-card-one contact-card-one-margin">Contact form</h2>}
         p2={
           <div id="contactform">
-            <label for="Name"  id="contactform-label">
-              Name
+            <label for="Name"  id="contact-form-label">
+              <span className="contact-span">Name</span>
               <input id="Name" type="text" class="contact-input-name" />
             </label>
-            <label for="Email" id="contactform-label">
-              Email <input type="Email" id="Email"class="contact-input-email"/>
+            <label for="Email" id="contact-form-label">
+            <span className="contact-span">  Email </span><input type="Email" id="Email"class="contact-input-email"/>
             </label>
             <label for="area" id="contactform-label">
-              Message: <textarea cols="50" rows="5" id="area" class="contact-input-textarea"></textarea>
+            <span className="contact-message"> Message:</span> <textarea cols="50" rows="5" id="area" class="contact-input-textarea"></textarea>
             </label>
             <button id="contact-button">Submit</button>
           </div>

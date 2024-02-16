@@ -94,3 +94,7 @@ body {
     width: 35px;
 
   }
+
+  .footer-icon #footer-svg:hover {
+    color:rgb(240, 162, 61);
+  }

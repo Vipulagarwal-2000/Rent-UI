@@ -3,7 +3,7 @@ import axios from "axios";
 import Single from "../singlecard/Single";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import OtherComponents from "../othercomponents/OtherComponent";;
+import OtherComponents from "../othercomponents/OtherComponent";
 
 function RegisterUser() {
   const [formData, setFormData] = useState({
@@ -22,41 +22,44 @@ function RegisterUser() {
     });
   };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
 
-
-
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-    
-      try {
-        const response = await axios.post("http://localhost:4000/api/register", formData, {
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/register",
+        formData,
+        {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
-        });
-        setResponseMessage(response.data.message);
-      } catch (error) {
-        console.error("Error registering user:", error.response ? error.response.data : error.message);
-        setResponseMessage("Registration failed. Please check your inputs and try again.");
-      }
-    };
-    
- 
+        }
+      );
+      setResponseMessage(response.data.message);
+    } catch (error) {
+      console.error(
+        "Error registering user:",
+        error.response ? error.response.data : error.message
+      );
+      setResponseMessage(
+        "Registration failed. Please check your inputs and try again."
+      );
+    }
+  };
 
   return (
     <div>
       <Header />
-     <OtherComponents/>
+      <OtherComponents />
       <Single
-        mid={""}
-        h1={""}
-        p={
-          <div>
+      
+        
+        first={
+          <div className="register-user-div">
             <form>
-              <label htmlFor="name">
-                <p>Email</p>
+              <label htmlFor="name" className="register-user-div-label">
+                <span className="register-user-span">Email</span>
                 <input
                   id="name"
                   type="email"
@@ -64,10 +67,11 @@ function RegisterUser() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  className="register-user-div-input-email"
                 />
               </label>
-              <label htmlFor="password">
-                <p>Password</p>
+              <label htmlFor="password" className="register-user-div-label">
+                <span className="register-user-span">Password</span>
                 <input
                   type="password"
                   id="password"
@@ -75,10 +79,11 @@ function RegisterUser() {
                   value={formData.password}
                   onChange={handleChange}
                   required
+                  className="register-user-div-input-password"
                 />
               </label>
-              <label htmlFor="confirmPassword">
-                <p>Confirm Password</p>
+              <label htmlFor="confirmPassword" className="register-user-div-label">
+                <span className="register-user-span ">Confirm Password</span>
                 <input
                   type="password"
                   id="confirmPassword"
@@ -86,15 +91,16 @@ function RegisterUser() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   required
+                  className="register-user-div-input-confirm-password"
                 />
               </label>
-              <button id="button" type="submit" onClick={handleSubmit}>
+              <button id="register-user-button" type="submit" onClick={handleSubmit}>
                 Submit
               </button>
             </form>
           </div>
         }
-        button={""}
+        
       />
       <p>{responseMessage}</p>
       <Footer />

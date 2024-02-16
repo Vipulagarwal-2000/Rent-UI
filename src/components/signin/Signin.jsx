@@ -1,19 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Single from "../singlecard/Single";
 import axios from "axios";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import OtherComponents from "../othercomponents/OtherComponent";
 
-
-
-
 function Signin() {
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-   
   });
 
   const [responseMessage, setResponseMessage] = useState("");
@@ -26,36 +21,47 @@ function Signin() {
     });
   };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
 
-
-
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-    
-      try {
-        const response = await axios.post("http://localhost:4000/api/signin", formData, {
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/signin",
+        formData,
+        {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
-        });
-        setResponseMessage(response.data.message);
-      } catch (error) {
-        console.error("Error registering user:", error.response ? error.response.data : error.message);
-        setResponseMessage("Registration failed. Please check your inputs and try again.");
-      }
-    };
+        }
+      );
+      setResponseMessage(response.data.message);
+    } catch (error) {
+      console.error(
+        "Error registering user:",
+        error.response ? error.response.data : error.message
+       
+      ); 
+      
+      setResponseMessage(()=>
+      {const val = error.response.data.error;
+      return val;}
+      );
+    }
     
-      return (
-        <div >
-        <Header />
-            <OtherComponents/>
-            <Single  mid={""}   
-            h1={""} p= {<div>
+  };
+
+  return (
+    <div>
+      <Header />
+      <OtherComponents />
+      <Single
+        
+        first={
+           <div className="signin-div-page">
             <form>
-            <label htmlFor="name">
-                <p>Email</p>
+              <label className="signin-div-label" htmlFor="name">
+                <span className="signin-div-label-span">Email</span>
                 <input
                   id="name"
                   type="email"
@@ -63,10 +69,11 @@ function Signin() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  className="signin-div-label-input-email"
                 />
               </label>
-              <label htmlFor="password">
-                <p>Password</p>
+              <label className="signin-div-label" htmlFor="password">
+                <span className="signin-div-label-span">Password</span>
                 <input
                   type="password"
                   id="password"
@@ -74,16 +81,26 @@ function Signin() {
                   value={formData.password}
                   onChange={handleChange}
                   required
+                  className="signin-div-label-input-password"
                 />
-              </label><p><a href="/contact">Forget Password?</a></p><button id="button" type="submit" onClick={handleSubmit}> Submit</button></form></div> } 
-            button = {""} />
+              </label>
+              <span className="signin-forget-password">
+                <a href="/contact">Forget Password?</a>
+              </span>
+              <button id="signin-div-button" type="submit" onClick={handleSubmit}>
+                
+                Submit
+              </button>
+            </form>
+          </div>
+          }
       
+      />
+
       <p>{responseMessage}</p>
-            <Footer />
-            </div>
-  
- 
-  );
+      <Footer />
+    </div>
+  );// response message is from backend
 }
 
 export default Signin;

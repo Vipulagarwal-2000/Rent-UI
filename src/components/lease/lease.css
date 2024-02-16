@@ -1,0 +1,25 @@
+.lease-css1 {
+    width: 25%;
+    padding:20px;
+    z-index: 1;
+    background-color: rgba(245, 241, 241, 0.971);
+    margin: 0px 40px;
+    height:90%;
+    border-radius: 20px;
+   
+  
+
+}
+
+.lease-css2 {
+    width: 30%;
+    padding:20px;
+    z-index: 1;
+    background-color: rgba(245, 241, 241, 0.971);
+    margin: 0 100px;
+    height:90%;
+    border-radius: 20px;
+
+
+  
+}

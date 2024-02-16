@@ -20,10 +20,14 @@
     height :3rem;
     position: relative;
     top:15px;
-    left: 8px;
+    left: -4px;
    color: aliceblue;
   }
   
+   .header-svg #head-svg:hover {
+    color:rgb(240, 162, 61);}
+
+
   #header-para {
     font-size: 1.5rem;
     font-weight: 500;
@@ -48,6 +52,7 @@
 
   .header-menu {
     margin-top: 28px;
+    margin-right:40px;
   }
   
   .header-right a {

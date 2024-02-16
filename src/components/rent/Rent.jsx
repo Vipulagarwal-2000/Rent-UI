@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-import RentCard from "./rentcard";
+import RentCard from "./RentComponent/RentCard";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import OtherComponents from "../othercomponents/OtherComponent";
-
 
 function Rent() {
   const [formData, setFormData] = useState({
     BookName: "",
     userId: "",
     DateFrom: "",
-    DateTo:""
+    DateTo: "",
   });
 
   const [responseMessage, setResponseMessage] = useState("");
@@ -24,126 +23,149 @@ function Rent() {
     });
   };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
 
-
-
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-    
-      try {
-        const response = await axios.post("http://localhost:4000/api/rent", formData, {
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/rent",
+        formData,
+        {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
-        });
-        setResponseMessage(response.data.message);
-      } catch (error) {
-        console.error("Error registering user:", error.response ? error.response.data : error.message);
-        setResponseMessage("Registration failed. Please check your inputs and try again.");
-      }
-    };
+        }
+      );
+      setResponseMessage(response.data.message);
+    } catch (error) {
+      console.error(
+        "Error registering user:",
+        error.response ? error.response.data : error.message
+      );
+      setResponseMessage(
+        "Registration failed. Please check your inputs and try again."
+      );
+    }
+  };
 
-    const handleAvilability = async (e) => {
-      e.preventDefault();
-      console.log(formData);
-    
-      try {
-        const response = await axios.post("http://localhost:4000/api/available", formData, {
+  const handleAvilability = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/available",
+        formData,
+        {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
-        });
-        setResponseMessage(response.data.message);
-      } catch (error) {
-        console.error("Error registering user:", error.response ? error.response.data : error.message);
-        setResponseMessage("Registration failed. Please check your inputs and try again.");
-      }
-    };
-    
- 
+        }
+      );
+      setResponseMessage(response.data.message);
+    } catch (error) {
+      console.error(
+        "Error registering user:",
+        error.response ? error.response.data : error.message
+      );
+      setResponseMessage(
+        "Registration failed. Please check your inputs and try again."
+      );
+    }
+  };
+
+
 
   return (
     <div>
       <Header />
-     <OtherComponents/>
+      <OtherComponents />
       <RentCard
-        mid={""}
+        first={
+          <div className="single-rent-page-div-super">
+            <div className="single-rent-page-div-one">
+              <span className="single-rent-page-div-span">Book Id </span>
+              <span className="single-rent-page-div-span-bookid">Gibrish</span>
+            </div>
+            <div className="single-rent-page-div-form">
+              <label id="single-page-div-label" htmlFor="BookName">
+                <span className="single-rent-page-div-span">Book Name</span>
 
-p2= {<div><p>Book Id </p><p>Gibrish</p></div>}
-       
-        p={
-          <div>
-            
-              <label id="label" htmlFor="BookName">
-                <span><p>Book Name</p></span>
-                <span> <input
+                <input
                   id="name"
                   type="text"
                   name="BookName"
                   value={formData.BookName}
                   onChange={handleChange}
                   required
-                /></span>
+                  className="single-rent-page-div-input-name"
+                />
               </label>
 
-              <label id="label" htmlFor="userid">
-              <span> <p>Renter User ID     </p>                                     
-              </span>
-              <span id="userid">  <input
+              <label id="single-page-div-label" htmlFor="userid">
+                <span className="single-rent-page-div-span">Borrower id</span>
+
+                <input
                   type="text"
                   id="user"
                   name="userId"
                   value={formData.userId}
                   onChange={handleChange}
                   required
-                /> </span>
+                  className="single-rent-page-div-input-userid"
+                />
               </label>
 
-              <label id="label" htmlFor="DateFrom">
-              <span> <p>Date From</p>  </span>
-              <span> <input
+              <label id="single-page-div-label" htmlFor="DateFrom">
+                <span className="single-rent-page-div-span">Date From</span>
 
+                <input
                   type="Date"
                   id="DateFrom"
                   name="DateFrom"
                   value={formData.DateFrom}
                   onChange={handleChange}
                   required
-                />  </span>
+                  className="single-rent-page-div-input-datefrom"
+                />
               </label>
 
-              <label id="label" htmlFor="DateTo">  
-              <span> <p>Date To</p></span>
-              <span> <input
+              <label id="single-page-div-label" htmlFor="DateTo">
+                <span className="single-rent-page-div-span-dateto single-rent-page-div-span  ">
+                  <p>Date to</p>
+                </span>
+
+                <input
                   type="Date"
                   id="DateTo"
                   name="DateTo"
                   value={formData.DateTo}
                   onChange={handleChange}
                   required
-                />  </span>
+                  className="single-rent-page-div-input-dateto"
+                />
               </label>
-              </div>  }
-             
-
-          button = { <div id="bl">
-              <span id="first"><p>Check avilability and rent</p>
-              <button id="button" type="submit" onClick={handleAvilability}>
-                available
+            </div>
+          </div>
+        }
+        second={
+          <div id="single-rent-page-second-div">
+            <span id="first-span-rent-page">
+              Check avilability and Rent of the given Book
+              <button id="first-button-rent-page" type="submit" onClick={handleAvilability}>
+                Available
               </button>
-              </span>
+            </span>
 
-              <span id="second"><p>Rent Book</p>
-              <button id="button" type="submit" onClick={handleSubmit}>
-                rent
+            <span id="second-span-rent-page">
+              Rent Book with a click
+              <button id="second-button-rent-page" type="submit" onClick={handleSubmit}>
+                Rent
               </button>
-              </span>
-              </div>}
-         
-        
-
+            </span>
+          </div>
+        }
       />
       <p>{responseMessage}</p>
       <Footer />

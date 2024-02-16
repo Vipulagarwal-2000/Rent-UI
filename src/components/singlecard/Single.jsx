@@ -1,21 +1,16 @@
 import React from "react";
-import styles from "./single.module.css"
+import "./single.css";
 
-function Single(props){
-    
-return (
-<div className={styles.body}>
-<div className={styles.redstrip}>{props.mid}</div>
-     <div className={props.class1 ===undefined ? styles.card :props.class1 }>
-    
-     {props.h1}
-     {props.p}
-     {props.button}
-     </div>
-     
-     </div>
-     
-     );
-    }
+function Single(props) {
+  return (
+    <div className="single-body">
+      <div className="single-redstrip"></div>
+      <div className={props.css === undefined ? "single-card" : props.css}>
+        {props.first}
+        
+      </div>
+    </div>
+  );
+}
 
-    export default Single;
+export default Single;
