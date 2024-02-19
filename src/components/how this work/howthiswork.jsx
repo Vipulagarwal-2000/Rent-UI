@@ -27,7 +27,7 @@ function HOW() {
   return (
     <div>
       <Header />
-      <OtherComponents />
+      <OtherComponents search={false}/>
       <Card
         css="class1"
         mid={<h2 className="how-this-work-h2">HOW THIS WORKS</h2>}

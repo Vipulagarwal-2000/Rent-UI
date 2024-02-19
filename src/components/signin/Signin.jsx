@@ -23,7 +23,7 @@ function Signin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    
 
     try {
       const response = await axios.post(
@@ -35,14 +35,23 @@ function Signin() {
           },
         }
       );
-      setResponseMessage(response.data.message);
+      console.log(response.data);//it is showing result in the structure
+    
+    
+      setResponseMessage(()=>{
+        const val = response.data ? response.data.message : response.data.error;
+        return val;});
+
+
     } catch (error) {
       console.error(
         "Error registering user:",
-        error.response ? error.response.data : error.message
+        error.response ? error.response.data.error : error.message
        
       ); 
-      
+      console.error(error.response , "hello", error,);
+      //error is the structure response come from try
+      //message come from catch
       setResponseMessage(()=>
       {const val = error.response.data.error;
       return val;}
@@ -54,7 +63,7 @@ function Signin() {
   return (
     <div>
       <Header />
-      <OtherComponents />
+      <OtherComponents search={false} />
       <Single
         
         first={

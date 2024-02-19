@@ -38,25 +38,28 @@ function RegisterUser() {
       );
       setResponseMessage(response.data.message);
     } catch (error) {
-      console.error(
-        "Error registering user:",
-        error.response ? error.response.data : error.message
+      console.error(//error.message is the message present in the user register endpoint catch block.
+        "Error registering user:",//data.error is the error present in the try block
+        error.response ? error.response.data.error : error.message
       );
-      setResponseMessage(
-        "Registration failed. Please check your inputs and try again."
-      );
+      console.log( "ETest:",
+      error.response.data.error );//checking the error structure
+      setResponseMessage(()=>{const val = error.response.data.error;
+      return val;});
+        
     }
   };
 
   return (
     <div>
       <Header />
-      <OtherComponents />
+      <OtherComponents search={false} register={false}/>
       <Single
       
         
         first={
           <div className="register-user-div">
+          <p>{responseMessage}</p>
             <form>
               <label htmlFor="name" className="register-user-div-label">
                 <span className="register-user-span">Email</span>
@@ -102,7 +105,7 @@ function RegisterUser() {
         }
         
       />
-      <p>{responseMessage}</p>
+      
       <Footer />
     </div>
   );

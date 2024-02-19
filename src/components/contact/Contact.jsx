@@ -8,11 +8,16 @@ import Card from "../Card/Card";
 import "./contactcard.css";
 
 function Contact() {
+
+  
+
+
+
   return (
     <div>
       <Header />
 
-      <Othercomponents />
+      <Othercomponents search={false}/>
 
       <Card
         mid={""}

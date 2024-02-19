@@ -4,11 +4,15 @@ import Search from "./Search";
 import SignInButton from "./SignInButton";
 import "./othercomponents.css"
 
-function OtherComponents(){
+function OtherComponents(props){
+
+
+
+
     return (<div className="othercomponents-triple-div">
-        <Search />
+        <Search isSearchingAllowed={props.search} />
         <SignInButton />
-        <Register />
+        <Register isRegisterAllowed={props.register} />
         </div>
     );
 }

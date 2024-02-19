@@ -12,7 +12,7 @@ function NoRoute() {
   return (
     <div>
         <Header />
-        <Othercomponents/>
+        <Othercomponents search={false}/>
         <div className="NoRoute-div">
         <h1 className="NoRoute-css"> 404 : Wrong route/Endpoint!!</h1>
         </div>

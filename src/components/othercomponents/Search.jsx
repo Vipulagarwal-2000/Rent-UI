@@ -1,16 +1,16 @@
 import React from "react";
 import "./othercomponents.css";
 
-function Search() {
+function Search(props) {
   return (
 
       <div className="search-div">
-        <input
+         {(props.isSearchingAllowed !== undefined? props.isSearchingAllowed : true) && (<input
           className="other-search"
           type="search"
           placeholder="Search by Book Name, Author, Description etc..."
         />
-      </div>
+         )}</div>
     
   );
 }

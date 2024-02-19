@@ -9,7 +9,7 @@ function AboutUs() {
   return (
     <div>
       <Header />
-      <OtherComponents />
+      <OtherComponents search={false}/>
       <Card
         css="css1"
         mid={""}
