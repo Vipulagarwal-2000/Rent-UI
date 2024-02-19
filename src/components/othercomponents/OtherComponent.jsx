@@ -5,7 +5,7 @@ import SignInButton from "./SignInButton";
 import "./othercomponents.css"
 
 function OtherComponents(){
-    return (<div class="othercomponents-triple-div">
+    return (<div className="othercomponents-triple-div">
         <Search />
         <SignInButton />
         <Register />

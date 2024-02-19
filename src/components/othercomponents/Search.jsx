@@ -4,7 +4,7 @@ import "./othercomponents.css";
 function Search() {
   return (
 
-      <div class="search-div">
+      <div className="search-div">
         <input
           className="other-search"
           type="search"

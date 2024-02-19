@@ -3,7 +3,7 @@ import "../header.css";
 
 function MenuItem(props) { 
     return (
-        <span class="header-menu">
+        <span className="header-menu">
             <a href={props.link}>{props.text}</a>
           </span>
 

@@ -30,12 +30,12 @@ function HOW() {
       <OtherComponents />
       <Card
         css="class1"
-        mid={<h2 class="how-this-work-h2">HOW THIS WORKS</h2>}
+        mid={<h2 className="how-this-work-h2">HOW THIS WORKS</h2>}
         css2="class2"
-        h1={<h2 class="how-this-work-h2">RENTER GUIDE</h2>}
+        h1={<h2 className="how-this-work-h2">RENTER GUIDE</h2>}
         p={
           <div>
-            <p class="how-this-work-p">
+            <p className="how-this-work-p">
               How to find book and rent<strong>:</strong>
             </p>
             <ul>
@@ -43,10 +43,10 @@ function HOW() {
             </ul>
           </div>
         }
-        h2={<h2 class="how-this-work-h2">LEASE GUIDE</h2>}
+        h2={<h2 className="how-this-work-h2">LEASE GUIDE</h2>}
         p2={
           <div>
-            <p class="how-this-work-p">
+            <p className="how-this-work-p">
               How to put the book and rent<strong>:</strong>
             </p>
             <ul>
