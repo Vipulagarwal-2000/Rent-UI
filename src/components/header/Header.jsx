@@ -2,7 +2,7 @@ import React from "react"; //for using jsx
 import "./header.css";
 import MenuItem from "./Menu/MenuItem";
 
-function Header() {
+function Header(props) {
   return (
     <div className="header-head">
       <div className="header-top">
@@ -28,12 +28,12 @@ function Header() {
           </div>
         </div>
         <div className="header-right">
-        <MenuItem link="/lease" text="Lease/Give" />
-        <MenuItem link="/about" text="About us" />
-        <MenuItem link="/about" text="Books" />
-        <MenuItem link="/rent" text="Rent" />
-        <MenuItem link="/how" text="How this Work" />
-        <MenuItem link="/contact" text="Contact" />
+        <MenuItem link="/lease" text="Lease/Give" stylelink={props.colorResponseLease} />
+        <MenuItem stylelink={props.colorResponseAbout} link="/about" text="About us" />
+        <MenuItem stylelink={props.colorResponseBook} link="/about" text="Books" />
+        <MenuItem stylelink={props.colorResponseRent} link="/rent" text="Rent" />
+        <MenuItem stylelink={props.colorResponseHowThisWork} link="/how" text="How this Work" />
+        <MenuItem stylelink={props.colorResponseContact} link="/contact" text="Contact" />
  
         </div>
       </div>

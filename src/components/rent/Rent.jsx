@@ -79,7 +79,7 @@ function Rent() {
 
   return (
     <div>
-      <Header />
+      <Header colorResponseRent={true} />
       <OtherComponents search={false} register={false}/>
       <RentCard
         first={

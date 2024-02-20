@@ -8,7 +8,7 @@ import "./aboutus.css";
 function AboutUs() {
   return (
     <div>
-      <Header />
+      <Header colorResponseAbout={true}/>
       <OtherComponents search={false}/>
       <Card
         css="css1"

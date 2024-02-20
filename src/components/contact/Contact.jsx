@@ -15,7 +15,7 @@ function Contact() {
 
   return (
     <div>
-      <Header />
+      <Header colorResponseContact={true}/>
 
       <Othercomponents search={false}/>
 

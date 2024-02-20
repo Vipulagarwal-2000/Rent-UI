@@ -4,7 +4,7 @@ import "../header.css";
 function MenuItem(props) { 
     return (
         <span className="header-menu">
-            <a href={props.link}>{props.text}</a>
+            <a style={{color : props.stylelink !== undefined ? "#FFD95A": "white" }} href={props.link}>{props.text}</a>
           </span>
 
     );

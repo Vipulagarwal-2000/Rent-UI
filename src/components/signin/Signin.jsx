@@ -5,13 +5,20 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import OtherComponents from "../othercomponents/OtherComponent";
 
-function Signin() {
+
+// 0 represent initial state
+// 1 represent successfull login
+//2 rpresent wrong password or user does not exist
+//4 represent server brockdown
+
+function Signin(props) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
   const [responseMessage, setResponseMessage] = useState("");
+  const [responseSignal, setResponseSignal] = useState(0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,11 +43,17 @@ function Signin() {
         }
       );
       console.log(response.data);//it is showing result in the structure
-    
+      console.log(response.data.isLoggedIn);
     
       setResponseMessage(()=>{
         const val = response.data ? response.data.message : response.data.error;
         return val;});
+      setResponseSignal(()=>{
+        const val = response.data.isLoggedIn;
+        return val;
+      });
+
+      props.onSignIn(response.data.isLoggedIn);
 
 
     } catch (error) {
@@ -56,6 +69,8 @@ function Signin() {
       {const val = error.response.data.error;
       return val;}
       );
+
+      props.onSignIn(false, error.response.data.isLoggedIn);
     }
     
   };
@@ -107,6 +122,7 @@ function Signin() {
       />
 
       <p>{responseMessage}</p>
+      <p>show itself : {responseSignal}</p>
       <Footer />
     </div>
   );// response message is from backend

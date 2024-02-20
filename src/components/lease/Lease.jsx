@@ -52,7 +52,7 @@ function Lease() {
 
   return (
     <div>
-      <Header />
+      <Header colorResponseLease = {true}/>
       <OtherComponents search={false} register={false}/>
       <Card
         mid={""}

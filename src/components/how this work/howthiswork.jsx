@@ -26,7 +26,7 @@ function HOW() {
 
   return (
     <div>
-      <Header />
+      <Header colorResponseHowThisWork={true} />
       <OtherComponents search={false}/>
       <Card
         css="class1"
