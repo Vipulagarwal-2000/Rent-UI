@@ -11,7 +11,7 @@ function OtherComponents(props){
 
     return (<div className="othercomponents-triple-div">
         <Search isSearchingAllowed={props.search} />
-        <SignInButton />
+        <SignInButton issigninAllowed={props.signin}/>
         <Register isRegisterAllowed={props.register} />
         </div>
     );

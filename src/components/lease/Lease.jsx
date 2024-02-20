@@ -53,7 +53,7 @@ function Lease() {
   return (
     <div>
       <Header />
-      <OtherComponents search={false} />
+      <OtherComponents search={false} register={false}/>
       <Card
         mid={""}
         css="lease-css1"

@@ -80,7 +80,7 @@ function Rent() {
   return (
     <div>
       <Header />
-      <OtherComponents search={false}/>
+      <OtherComponents search={false} register={false}/>
       <RentCard
         first={
           <div className="single-rent-page-div-super">

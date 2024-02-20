@@ -1,7 +1,7 @@
 .single-body {
   margin-top: 30px;
   position: relative;
-  height: 55vh;
+  height: 56.8vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 .register-user-div {
-    padding:80px 10px 50px 10px;
+    padding:50px 10px 50px 10px;
 }
 
 .signin-div-label, .signin-forget-password, #signin-div-button {
@@ -81,7 +81,7 @@ margin-bottom: 15px;
 
 }
 
-.register-user-div-input-email, .register-user-div-input-password, .register-user-div-input-confirm-password {
+.register-user-div-input-email, .register-user-div-input-password, .register-user-div-input-confirm-password, .register-user-div-input-fav-pet {
     background-color: aliceblue;
     font-size: 1.1rem;
     width:50%;
@@ -92,7 +92,7 @@ margin-bottom: 15px;
     
 }
 
-.register-user-div-input-confirm-password {
+.register-user-div-input-confirm-password, .register-user-div-input-fav-pet{
     position: relative;
     top:-15px;
 

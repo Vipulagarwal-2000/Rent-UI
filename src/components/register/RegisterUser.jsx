@@ -10,6 +10,7 @@ function RegisterUser() {
     email: "",
     password: "",
     confirmPassword: "",
+    favpet:"",
   });
 
   const [responseMessage, setResponseMessage] = useState("");
@@ -95,6 +96,18 @@ function RegisterUser() {
                   onChange={handleChange}
                   required
                   className="register-user-div-input-confirm-password"
+                />
+              </label>
+              <label htmlFor="favpet" className="register-user-fav-pet">
+                <span className="register-user-span ">Favourite Pet</span>
+                <input
+                  type="text"
+                  id="favpet"
+                  name="favpet"
+                  value={formData.favpet}
+                  onChange={handleChange}
+                  required
+                  className="register-user-div-input-fav-pet"
                 />
               </label>
               <button id="register-user-button" type="submit" onClick={handleSubmit}>
