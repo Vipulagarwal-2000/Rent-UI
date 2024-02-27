@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import OtherComponents from "../othercomponents/OtherComponent";
 
-function RegisterUser() {
+function RegisterUser(props) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,6 +14,7 @@ function RegisterUser() {
   });
 
   const [responseMessage, setResponseMessage] = useState("");
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +38,12 @@ function RegisterUser() {
           },
         }
       );
-      setResponseMessage(response.data.message);
+      setResponseMessage(()=>{
+        const val = response.data ? response.data.message : response.data.error;
+        return val;});
+      
+
+      props.onSignIn(response.data.isLoggedIn);
     } catch (error) {
       console.error(//error.message is the message present in the user register endpoint catch block.
         "Error registering user:",//data.error is the error present in the try block
@@ -47,7 +53,7 @@ function RegisterUser() {
       error.response.data.error );//checking the error structure
       setResponseMessage(()=>{const val = error.response.data.error;
       return val;});
-        
+      props.onSignIn(false, error.response.data.isLoggedIn);
     }
   };
 
@@ -60,7 +66,8 @@ function RegisterUser() {
         
         first={
           <div className="register-user-div">
-          <p>{responseMessage}</p>
+          <div class="single-span-message-register-user">{responseMessage}</div>
+          
             <form>
               <label htmlFor="name" className="register-user-div-label">
                 <span className="register-user-span">Email</span>

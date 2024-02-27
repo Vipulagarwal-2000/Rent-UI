@@ -18,7 +18,7 @@ function Signin(props) {
   });
 
   const [responseMessage, setResponseMessage] = useState("");
-  const [responseSignal, setResponseSignal] = useState(0);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,10 +48,7 @@ function Signin(props) {
       setResponseMessage(()=>{
         const val = response.data ? response.data.message : response.data.error;
         return val;});
-      setResponseSignal(()=>{
-        const val = response.data.isLoggedIn;
-        return val;
-      });
+    
 
       props.onSignIn(response.data.isLoggedIn);
 
@@ -80,9 +77,12 @@ function Signin(props) {
       <Header />
       <OtherComponents search={false} signin={false}/>
       <Single
+      
         
         first={
            <div className="signin-div-page">
+           <div class="single-span-message-signin-user">{responseMessage}</div>
+    
             <form>
               <label className="signin-div-label" htmlFor="name">
                 <span className="signin-div-label-span">Email</span>
@@ -121,8 +121,7 @@ function Signin(props) {
       
       />
 
-      <p>{responseMessage}</p>
-      <p>show itself : {responseSignal}</p>
+   
       <Footer />
     </div>
   );// response message is from backend

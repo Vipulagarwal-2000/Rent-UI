@@ -1,7 +1,7 @@
 .single-body {
   margin-top: 30px;
   position: relative;
-  height: 56.8vh;
+  height: 55.8vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,17 +24,37 @@
   z-index: 99;
   background-color: rgba(245, 241, 241, 0.971);
   margin: 0 90px;
-  height: 80%;
+  height: 90%;
   border-radius: 30px;
  
 }
 
+.single-span-message-register-user, .single-span-message-signin-user, .single-div-message-rent-main {
+    
+    height: 4rem;
+    font-size: 1.1rem;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding:10px;
+    font-style: normal;
+    font-family:Arial, Helvetica, sans-serif;
+    transform: scale3d(1.4);
+    letter-spacing: .2px;
+    border-radius: 10px;
+    border: 4px dotted rgb(152, 37, 56);
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
+
 .signin-div-page {
-    padding:100px 10px 50px 10px;
+    padding:60px 10px 50px 10px;
 }
 
 .register-user-div {
-    padding:50px 10px 50px 10px;
+    padding:10px 10px 50px 10px;
 }
 
 .signin-div-label, .signin-forget-password, #signin-div-button {
@@ -77,6 +97,7 @@ margin-bottom: 15px;
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
+    border-color: #27ae60;
     
 
 }
@@ -89,6 +110,7 @@ margin-bottom: 15px;
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
+    border-color: #27ae60;
     
 }
 
@@ -112,7 +134,7 @@ margin-bottom: 15px;
     padding: 5px;
     border-radius: 10px;
     background-color: antiquewhite;
-    border: 1px dotted rgb(152, 37, 56);
+    border: 4px dotted rgb(152, 37, 56);
     width: 100px;
     font-size: 1rem;
     margin-bottom: 10px;
@@ -122,6 +144,7 @@ margin-bottom: 15px;
 
 #signin-div-button:hover, #register-user-button:hover {
     background-color:rgb(240, 162, 61) ;
+    transform: scale(0.98);
 }
 
 

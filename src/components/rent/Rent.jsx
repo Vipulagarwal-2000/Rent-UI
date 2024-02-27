@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState , useContext} from "react";
 import axios from "axios";
 import RentCard from "./RentComponent/RentCard";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import OtherComponents from "../othercomponents/OtherComponent";
+import { AuthContext } from "../../auth/AuthContext";
 
 function Rent() {
+
+
+  const auth = useContext(AuthContext);
+console.log(auth.isLoggedIn, "hi from about us");
+
+
   const [formData, setFormData] = useState({
     BookName: "",
     userId: "",
@@ -14,7 +21,7 @@ function Rent() {
   });
 
   const [responseMessage, setResponseMessage] = useState("");
-
+  const [responseVisible, setResponseVisible] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -37,15 +44,20 @@ function Rent() {
           },
         }
       );
-      setResponseMessage(response.data.message);
+      setResponseMessage(()=>{
+        const val = response.data ? response.data.message : response.data.error;
+        return val;});
+   
+
+
+
     } catch (error) {
       console.error(
         "Error registering user:",
         error.response ? error.response.data : error.message
       );
-      setResponseMessage(
-        "Registration failed. Please check your inputs and try again."
-      );
+      setResponseMessage(()=>{const val = error.response.data.error;
+        return val;});
     }
   };
 
@@ -63,15 +75,28 @@ function Rent() {
           },
         }
       );
-      setResponseMessage(response.data.message);
+      setResponseMessage(()=>{
+        const val = response.data ? response.data.message : response.data.error;
+        return val;});
+
+        setResponseVisible(()=>{
+          const val = response.data.rentButton;
+          return val;});
+
+          setTimeout(() => {
+            setResponseVisible(false);
+          }, 5000);
+
+     
+
+
     } catch (error) {
       console.error(
         "Error registering user:",
         error.response ? error.response.data : error.message
       );
-      setResponseMessage(
-        "Registration failed. Please check your inputs and try again."
-      );
+      setResponseMessage(()=>{const val = error.response.data.error;
+        return val;});
     }
   };
 
@@ -81,9 +106,11 @@ function Rent() {
     <div>
       <Header colorResponseRent={true} />
       <OtherComponents search={false} register={false}/>
+      {(auth.isLoggedIn) &&
       <RentCard
         first={
           <div className="single-rent-page-div-super">
+          <div className="single-div-message-rent-main">{responseMessage}</div>
             <div className="single-rent-page-div-one">
               <span className="single-rent-page-div-span">Book Id </span>
               <span className="single-rent-page-div-span-bookid">Gibrish</span>
@@ -160,14 +187,19 @@ function Rent() {
 
             <span id="second-span-rent-page">
               Rent Book with a click
-              <button id="second-button-rent-page" type="submit" onClick={handleSubmit}>
+              {responseVisible && <button id="second-button-rent-page" type="submit" onClick={handleSubmit}>
                 Rent
-              </button>
+              </button> 
+              }
             </span>
           </div>
         }
       />
-      <p>{responseMessage}</p>
+        }
+           {!auth.isLoggedIn && <div className="NoRoute-div">
+        <h1 className="NoRoute-css"> To access Rent, Please Log in!</h1>
+        </div>}
+      
       <Footer />
     </div>
   );

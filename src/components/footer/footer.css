@@ -44,6 +44,7 @@ body {
   .footer-float a:hover {
     color: rgb(105, 235, 146);
     text-decoration: none;
+   
 
   }
 
@@ -92,9 +93,11 @@ body {
     color: rgb(138, 105, 235);
     height: 35px;
     width: 35px;
+   
 
   }
 
   .footer-icon #footer-svg:hover {
     color:rgb(240, 162, 61);
+    transform: scale(0.90);
   }

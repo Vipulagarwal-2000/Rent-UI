@@ -1,8 +1,13 @@
-import React from "react"; //for using jsx
+import React, {useContext} from "react"; //for using jsx
 import "./header.css";
 import MenuItem from "./Menu/MenuItem";
+import { Link } from "react-router-dom";
+
+import { AuthContext } from "../../auth/AuthContext";
 
 function Header(props) {
+
+  const auth = useContext(AuthContext);
   return (
     <div className="header-head">
       <div className="header-top">
@@ -22,18 +27,18 @@ function Header(props) {
             </svg>
           </div>
           <div className="header-domain">
-            <a href="/">
+            <Link to="/">
               <p id="header-para">BOOK RENTAL</p>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="header-right">
-        <MenuItem link="/lease" text="Lease/Give" stylelink={props.colorResponseLease} />
-        <MenuItem stylelink={props.colorResponseAbout} link="/about" text="About us" />
-        <MenuItem stylelink={props.colorResponseBook} link="/about" text="Books" />
-        <MenuItem stylelink={props.colorResponseRent} link="/rent" text="Rent" />
-        <MenuItem stylelink={props.colorResponseHowThisWork} link="/how" text="How this Work" />
-        <MenuItem stylelink={props.colorResponseContact} link="/contact" text="Contact" />
+        <MenuItem link="/lease" text="Lease/Give" stylelink={props.colorResponseLease} ColorIdentity= {auth.isLoggedIn ? "white" : "#B4B4B8"}/>
+        <MenuItem stylelink={props.colorResponseAbout} link="/about" text="About us" ColorIdentity="white"/>
+        <MenuItem stylelink={props.colorResponseBook} link="/about" text="Books"  ColorIdentity={auth.isLoggedIn ? "white" : "#B4B4B8"}/>
+        <MenuItem stylelink={props.colorResponseRent} link="/rent" text="Rent" ColorIdentity={auth.isLoggedIn ? "white" : "#B4B4B8"}/>
+        <MenuItem stylelink={props.colorResponseHowThisWork} link="/how" text="How this Work" ColorIdentity="white" />
+        <MenuItem stylelink={props.colorResponseContact} link="/contact" text="Contact" ColorIdentity="white"/>
  
         </div>
       </div>

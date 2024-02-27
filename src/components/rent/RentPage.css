@@ -31,7 +31,7 @@
 
 .single-rent-page-div-super {
 
-    padding:40px 60px;
+    padding:30px 60px 20px;
 }
 
 .single-rent-page-div-one {
@@ -62,22 +62,26 @@
 #single-page-div-label {
     margin: 15px 0;
     display: block;
+    width:60%;
 }
 
                  
 .single-rent-page-div-input-name, .single-rent-page-div-input-userid, .single-rent-page-div-input-datefrom, .single-rent-page-div-input-dateto {
     background-color: aliceblue;
     font-size: 1.1rem;
-    width:20%;
+    width:40%;
     display: inline-block;
     margin-left: 0px;
     padding: 10px 20px;
     border-radius: 15px;
     font-family: monospace;
+    border-color: #27ae60;
+    position: relative;
+    top:-7px;
 }
 
 .single-rent-page-div-input-datefrom, .single-rent-page-div-input-dateto {
-    width:20%;
+    width:40%;
     font-family: monospace;
 }
 
@@ -103,10 +107,10 @@
     margin-top: 5px;
     position: relative;
     left: 10px;
-    padding: 5px;
+    padding: 7px;
     border-radius: 10px;
     background-color: antiquewhite;
-    border: 1px dotted rgb(152, 37, 56);
+    border: 4px dotted rgb(152, 37, 56);
     width: 100px;
     font-size: 1rem;
     margin-bottom: 10px;
@@ -116,6 +120,7 @@
 
 #first-button-rent-page:hover {
     background-color:rgb(240, 162, 61) ;
+    transform: scale(0.90);
 }
 
 #second-span-rent-page {
@@ -133,11 +138,11 @@
         height: 2.5rem;
         margin-top: 5px;
         position: relative;
-        left: -20px;
-        padding: 5px;
+        left: 20px;
+        padding: 7px;
         border-radius: 10px;
         background-color: antiquewhite;
-        border: 1px dotted rgb(152, 37, 56);
+        border: 4px dotted rgb(152, 37, 56);
         width: 100px;
         font-size: 1rem;
         margin-bottom: 10px;
@@ -147,9 +152,17 @@
     
     #second-button-rent-page:hover {
         background-color:rgb(240, 162, 61) ;
+        transform: scale(0.90);
     }
 
-
+    .single-div-message-rent-main {
+        position: absolute;
+        right:32%;
+        width:13%;
+        height:17rem;
+        top: 7rem;
+       
+    }
 
 
 

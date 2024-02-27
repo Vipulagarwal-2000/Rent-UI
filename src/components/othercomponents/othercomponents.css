@@ -1,5 +1,5 @@
   .other-register {
-    width:5%;
+    width:6%;
     background-color: rgba(167, 106, 98, 0.327);
     
     padding: 0px;
@@ -18,6 +18,14 @@
 
 #other-para:hover {
   background-color: rgba(52, 43, 41, 0.873);
+  transform: scale(1.06);
+}
+
+
+#other-para:active {
+  background-color:rgba(52, 43, 41, 0.873) ;
+  transform: scale(1.06);
+ 
 }
 
 .hidden-register,.hidden-signin {
@@ -35,7 +43,7 @@
   }
 
   #other-para {
-    background-color: rgb(240, 162, 61);
+    background-color: rgb(238, 206, 179);
     width: 100%;
     font-size: 1.4rem;
     font-weight: 550;
@@ -43,6 +51,8 @@
     text-align: center;
     padding:10px 15px;
     border-radius: 10px;
+    cursor: pointer;
+  transition: transform 0.2s ease-in-out;
     
   }
   
@@ -83,8 +93,8 @@
 
   .other-signin {
     display: inline-block;
-    background-color: rgb(240, 162, 61);
-    width: 70%;
+    background-color: rgb(238, 206, 179);
+    width: 75%;
     
     display: flex;
    
@@ -119,6 +129,7 @@
 
   .signin-button-other:hover {
     background-color:rgba(52, 43, 41, 0.873) ;
+    transform: scale(1.06);
    
   }
 
@@ -134,11 +145,17 @@
     font-weight: 550;
   padding-bottom: 2px;
     text-align: center;
-    background-color: rgb(240, 162, 61);
+    background-color: rgb(238, 206, 179);
     border-radius: 10px;
-    
+    cursor: pointer;
+  transition: transform 0.2s ease-in-out;
   
 
+  }
+  .signin-button-other:active {
+    background-color:rgba(52, 43, 41, 0.873) ;
+    transform: scale(1.06);
+   
   }
   
   

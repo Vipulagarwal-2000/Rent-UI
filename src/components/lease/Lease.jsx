@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
@@ -6,7 +6,16 @@ import Header from "../Header/Header";
 import "./lease.css";
 import OtherComponents from "../othercomponents/OtherComponent";
 
+import { AuthContext } from "../../auth/AuthContext";
+
 function Lease() {
+
+  const auth = useContext(AuthContext);
+console.log(auth.isLoggedIn, "hi from about us");
+
+
+
+
   const [formData, setFormData] = useState({
     BookName: "",
     userId: "",
@@ -38,15 +47,16 @@ function Lease() {
           },
         }
       );
-      setResponseMessage(response.data.message); //try it with putting it in try block
+      setResponseMessage(()=>{
+        const val = response.data ? response.data.message : response.data.error;
+        return val;}); //try it with putting it in try block
     } catch (error) {
       console.error(
         "Error registering user:",
         error.response ? error.response.data : error.message
       );
-      setResponseMessage(
-        "Registration failed. Please check your inputs and try again."
-      );
+      setResponseMessage(()=>{const val = error.response.data.error;
+        return val;});
     }
   };
 
@@ -54,11 +64,14 @@ function Lease() {
     <div>
       <Header colorResponseLease = {true}/>
       <OtherComponents search={false} register={false}/>
+      {(auth.isLoggedIn) &&
       <Card
         mid={""}
         css="lease-css1"
         h1={
+         
           <div className="lease-page-form">
+           <div class="single-div-message-lease-user">{responseMessage}</div>
             <label id="lease-page-card-label" htmlFor="BookName">
               <span className="lease-page-span">
                 Book Name
@@ -142,8 +155,11 @@ function Lease() {
         css2="lease-css2"
         h2={""}
         p2={""}
-      />
-      <p>{responseMessage}</p>
+      />}
+           {!auth.isLoggedIn && <div className="NoRoute-div">
+        <h1 className="NoRoute-css"> Leaseing Not Accessible, without Sign in !!</h1>
+        </div>}
+     
       <Footer />
     </div>
   );

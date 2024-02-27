@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import {Link} from "react-router-dom";
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
     <div id="footer">
       <div className="footer-cover">
         <div className="footer-float">
-          <a href="./"><h2>BOOK RENTAL</h2></a>
+          <Link to="/" exact><h2>BOOK RENTAL</h2></Link>
         </div>
       </div>
       <div className="footer-sides">

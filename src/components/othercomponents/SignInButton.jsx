@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./othercomponents.css";
+
+
+import { AuthContext } from "../../auth/AuthContext";
 
 function SignInButton(props) {
   //more descrptive name
+  const auth = useContext(AuthContext);
 
   const [style, setStyle] = useState(true);
 
@@ -17,7 +21,7 @@ function SignInButton(props) {
       <div className="other-signin">
         <a href="/signin">
           <span className="signin-button-other">
-            Login
+          {(auth.isLoggedIn) ? "Log out" : "Login"}
             <svg
             id="svg"
               xmlns="http://www.w3.org/2000/svg"

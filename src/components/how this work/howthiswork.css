@@ -1,3 +1,62 @@
+.class1,.class2 {
+    width: 15%;
+    padding: 40px;
+    z-index: 1;
+    background-color: rgba(245, 241, 241, 0.971);
+    margin: 0 120px;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.class1::before, .class2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: .5px solid #e7df73d5;
+    border-radius: 30px;
+    box-sizing: border-box;
+    animation: borderAnimation 3s infinite reverse;
+}
+
+
+
+
+
+.class2::before {
+    animation: borderAnimation 3s infinite reverse;
+
+}
+
+@keyframes borderAnimation {
+    0% {
+        transform: translate(0%, 0);
+    }
+    50% {
+        transform: translate(100%, 0);
+    }
+    
+   
+}
+/*50% {
+    transform: translate(100%, 100%);
+}
+
+75% {
+    transform: translate(0, 100%);
+}
+100% {
+    transform: translate(0, 0);
+}
+*/
+
 .class1 {
     width: 15%;
     padding:40px;
@@ -25,5 +84,29 @@
 }
 
 .how-this-work-list {
-    font-size: 1.1rem;;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
+
+
+.card-redstrip {
+    background-color: rgba(210, 174, 174, 0.971);
+    width: 100%;
+    height: 120px;
+    z-index: -99;
+    top: 15vh;
+    text-align: center;
+    position: absolute;
+    animation: colorChange 10s linear infinite;
+  }
+  
+  @keyframes colorChange {
+    0% { background-color: rgba(187, 155, 155, 0.971); }
+    14% { background-color: rgba(243, 201, 164, 0.971); }
+    29% { background-color: rgba(241, 241, 204, 0.971); }
+    43% { background-color: rgba(187, 221, 187, 0.971); }
+    57% { background-color: rgba(170, 187, 205, 0.971); }
+    71% { background-color: rgba(207, 191, 221, 0.971); }
+    86% { background-color: rgba(204, 181, 228, 0.971); }
+    100% { background-color: rgba(232, 176, 176, 0.971); }
+  }

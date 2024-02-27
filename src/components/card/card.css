@@ -19,6 +19,12 @@
   position: absolute;
 }
 
+
+
+
+
+
+
 .card-card {
   width: 28%;
   padding: 30px;
@@ -61,8 +67,10 @@
   height: 50px;
   width: 50px;
   margin-bottom: 5px;
+  
 }
-#contact-svg:hover {color: rgb(240, 162, 61);}
+#contact-svg:hover {color: rgb(240, 162, 61);
+  transform: scale(0.90);}
 
 
 
@@ -96,12 +104,16 @@
   background-color: aliceblue;
   width: 60%;
   font-size: 1.2rem;
+  border-color: #27ae60;
 }
 
 .contact-input-email {
     width: 60%;
+    border-color: #27ae60;
    
 }
+
+
 
 .contact-input-textarea {
     display: block;
@@ -111,11 +123,13 @@
     font-family: monospace;
     margin-top: 20px;
     margin-left: 20px;
+    border-color: #27ae60;
 }
 
 .how-this-work-p {
     font-size: 1.3rem;
     text-align: center;
+    margin-bottom: 5px;
 
 }
 
@@ -124,20 +138,23 @@
   margin: 0;
   height: 2.5rem;
   position: relative;
-  left: 400px;
+  left: 360px;
   padding: 5px;
   border-radius: 10px;
   background-color: antiquewhite;
-  border: 1px dotted rgb(246, 139, 157);
+  border: 4px dotted rgb(193, 111, 124);
   width: 100px;
   font-size: 1.1rem;
   margin-bottom: 10px;
   margin-top: 20px;
 }
 
+
+
 #contact-button:hover {
    
     background-color: rgb(240, 162, 61);
+    transform: scale(0.98);
    
   }
 
@@ -157,7 +174,7 @@
   padding: 5px;
   border-radius: 10px;
   background-color: antiquewhite;
-  border: 1px dotted rgb(246, 139, 157);
+  border: 4px dotted rgb(246, 139, 157);
   width: 100px;
   font-size: 1rem;
   margin-bottom: 10px;
@@ -166,6 +183,7 @@
 #about-us-button:hover {
    
     background-color: rgb(240, 162, 61);
+    transform: scale(0.98);
    
   }
 
@@ -175,7 +193,7 @@
 
 
 .lease-page-form {
-  padding:60px 40px 40px 40px;
+  padding:10px 40px 20px 40px;
 }
 
 #lease-page-div-second {
@@ -204,6 +222,7 @@
   background-color: aliceblue;
   width: 60%;
   font-size: 1.2rem;
+  border-color: #27ae60;
 }
 
 
@@ -217,7 +236,7 @@
   padding: 5px;
   border-radius: 5px;
   background-color: antiquewhite;
-  border: 1px dotted rgb(246, 139, 157);
+  border: 4px dotted rgb(246, 139, 157);
   width: 100px;
   font-size: 1rem;
   margin-bottom: 10px;
@@ -228,5 +247,25 @@
 #lease-page-div-button-id:hover {
    
   background-color: rgb(240, 162, 61);
+  transform: scale(0.90);
  
+}
+
+
+.single-div-message-lease-user {
+    
+  height: 4rem;
+  font-size: 1.1rem;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding:10px;
+  font-style: normal;
+  font-family:Arial, Helvetica, sans-serif;
+  transform: scale3d(1.4);
+  letter-spacing: .2px;
+  border-radius: 10px;
+  border: 4px dotted rgb(152, 37, 56);
+  background-color: antiquewhite;
+  text-align: center;
 }
